@@ -12,7 +12,8 @@ public class Question implements Serializable {
     private static int idStatic = 1;
     private int id;
     private transient boolean v;
-
+private Level level;
+private Category category;
     public Question() {
     }
 
