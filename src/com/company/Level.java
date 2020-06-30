@@ -1,6 +1,8 @@
 package com.company;
 
-public class Level <T>{
+import java.io.Serializable;
+
+public class Level <T> implements Serializable {
     private T level;
 public Level(){
 }

@@ -13,17 +13,35 @@ public class Question implements Serializable {
     private int id;
     private transient boolean v;
 private Level level;
-private Category category;
+private String category;
     public Question() {
     }
 
-    public Question(String question, String firstReply, String secondReply, String thirdsReply, int rightValue) {
+    public Question(String question, String firstReply, String secondReply, String thirdsReply, int rightValue,Level level,String category) {
         this.firstReply = firstReply;
         this.question = question;
         this.secondReply = secondReply;
         this.thirdsReply = thirdsReply;
         this.rightValue = rightValue;
+        this.level=level;
+        this.category=category;
         setId();
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Level getLevel() {
+        return level;
+    }
+
+    public String getCategory() {
+        return category;
     }
 
     public String getFirstReply() {
